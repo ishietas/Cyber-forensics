@@ -1,0 +1,25 @@
+1. MONITOR LIVE PROCESSES
+top → real-time process monitoring
+ps aux → list of all running processes
+
+2. CAPTURE RAM ( MEMORY DUMP )
+sudo dd if=/dev/mem of=ram_dump.mem bs=1M
+sudo insmod lime.ko "path=/home/user/memdump.lime format=lime"
+
+3. TCP/UDP PACKETS
+Capture a file - sudo tcpdump -i eth0 -w capture.pcap
+Show only TCP - sudo tcpdump tcp
+Show only UDP - sudo tcpdump udp
+
+4. MONITOR HARD DISK
+Disk usage - df -h
+I/O operations - iostat
+Disk read/write in real time - iotop
+
+5. MONITOR VIRTUAL MEMORY
+using vmstat - vmstat 1
+swap memory - free -h
+check memory usage per process - top
+
+6. MONITOR CACHE MEMORY
+cache memory - free -h
